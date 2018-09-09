@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class TextController : MonoBehaviour {
 
-	public InputField GetInput;
 	public GameObject textMesh;
 
+	private string text = "Hello";
+
+	public void SetText(string text){
+		this.text = text;
+	}
+
 	public void WriteText(){
-		textMesh.GetComponent<TextMesh>().text = GetInput.text;
-		GetInput.text = null;
+		textMesh.GetComponent<TextMesh>().text = this.text;
 	}
 
 	// Use this for initialization
@@ -19,6 +23,6 @@ public class TextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		WriteText();
 	}
 }
