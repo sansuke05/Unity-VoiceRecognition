@@ -20,12 +20,14 @@ git clone https://github.com/sansuke05/Unity-VoiceRecognition.git
 
 Unityから`Unity-VoiceRecognition`プロジェクトを開く
 
-`File -> Build & Run` で実行できます
+`Edit -> Play` で実行できます
 
 # Notification
 
 マイクが複数ある場合
 
-`source.QueryDeviceInfo(0, out dinfo);`
+```
+source.QueryDeviceInfo(0, out dinfo);
+```
 
 の第一引数の0を1とか2に変更してみてください
